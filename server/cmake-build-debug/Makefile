@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/mediator/Mediator.o: src/mediator/Mediator.cpp.o
+
+.PHONY : src/mediator/Mediator.o
+
+# target to build an object file
+src/mediator/Mediator.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/mediator/Mediator.cpp.o
+.PHONY : src/mediator/Mediator.cpp.o
+
+src/mediator/Mediator.i: src/mediator/Mediator.cpp.i
+
+.PHONY : src/mediator/Mediator.i
+
+# target to preprocess a source file
+src/mediator/Mediator.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/mediator/Mediator.cpp.i
+.PHONY : src/mediator/Mediator.cpp.i
+
+src/mediator/Mediator.s: src/mediator/Mediator.cpp.s
+
+.PHONY : src/mediator/Mediator.s
+
+# target to generate assembly for a file
+src/mediator/Mediator.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/mediator/Mediator.cpp.s
+.PHONY : src/mediator/Mediator.cpp.s
+
 src/server/Server.o: src/server/Server.cpp.o
 
 .PHONY : src/server/Server.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/mediator/Mediator.o"
+	@echo "... src/mediator/Mediator.i"
+	@echo "... src/mediator/Mediator.s"
 	@echo "... src/server/Server.o"
 	@echo "... src/server/Server.i"
 	@echo "... src/server/Server.s"

@@ -32,11 +32,10 @@ Server::Server() {
         std::cout << "Waiting for connection\n";
 
         struct sockaddr_in client = { };
-        const int clientSocket = accept(serverSocket, ( struct sockaddr * ) & client,
+        int clientSocket = accept(serverSocket, ( struct sockaddr * ) & client,
                                         reinterpret_cast<socklen_t *>(&len));
 
         std::cout << "Connect " << client.sin_port <<"\n";
-
-        // TODO add to client list and create thread
+        this->mediator.addNewClient(clientSocket);
     }
 }

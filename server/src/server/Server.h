@@ -2,6 +2,8 @@
 #define SERVER_SERVER_H
 
 
+#include "../mediator/Mediator.h"
+
 #include <string>
 
 class Server {
@@ -9,7 +11,7 @@ public:
     Server();
 
 private:
-    // client list
+    Mediator mediator;
 };
 
 
