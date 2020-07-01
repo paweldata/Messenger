@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/client/Client.o: src/client/Client.cpp.o
+
+.PHONY : src/client/Client.o
+
+# target to build an object file
+src/client/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/client/Client.cpp.o
+.PHONY : src/client/Client.cpp.o
+
+src/client/Client.i: src/client/Client.cpp.i
+
+.PHONY : src/client/Client.i
+
+# target to preprocess a source file
+src/client/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/client/Client.cpp.i
+.PHONY : src/client/Client.cpp.i
+
+src/client/Client.s: src/client/Client.cpp.s
+
+.PHONY : src/client/Client.s
+
+# target to generate assembly for a file
+src/client/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/client/Client.cpp.s
+.PHONY : src/client/Client.cpp.s
+
 src/mediator/Mediator.o: src/mediator/Mediator.cpp.o
 
 .PHONY : src/mediator/Mediator.o
@@ -216,6 +243,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/client/Client.o"
+	@echo "... src/client/Client.i"
+	@echo "... src/client/Client.s"
 	@echo "... src/mediator/Mediator.o"
 	@echo "... src/mediator/Mediator.i"
 	@echo "... src/mediator/Mediator.s"

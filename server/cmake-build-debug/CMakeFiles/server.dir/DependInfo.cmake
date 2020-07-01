@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pawel/Documents/projects/messenger/server/main.cpp" "/home/pawel/Documents/projects/messenger/server/cmake-build-debug/CMakeFiles/server.dir/main.cpp.o"
+  "/home/pawel/Documents/projects/messenger/server/src/client/Client.cpp" "/home/pawel/Documents/projects/messenger/server/cmake-build-debug/CMakeFiles/server.dir/src/client/Client.cpp.o"
   "/home/pawel/Documents/projects/messenger/server/src/mediator/Mediator.cpp" "/home/pawel/Documents/projects/messenger/server/cmake-build-debug/CMakeFiles/server.dir/src/mediator/Mediator.cpp.o"
   "/home/pawel/Documents/projects/messenger/server/src/server/Server.cpp" "/home/pawel/Documents/projects/messenger/server/cmake-build-debug/CMakeFiles/server.dir/src/server/Server.cpp.o"
   )

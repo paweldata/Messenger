@@ -85,6 +85,12 @@
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/main.cpp">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/client/Client.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/client/Client.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/mediator/Mediator.cpp">
 			<Option target="server"/>
 		</Unit>

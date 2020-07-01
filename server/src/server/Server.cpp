@@ -17,25 +17,19 @@ Server::Server() {
     socklen_t len = sizeof(serwer);
 
     if (bind(serverSocket, ( struct sockaddr * ) & serwer, len) < 0) {
-        fprintf(stderr, "Bind error");
+        fprintf(stderr, "Bind error\n");
         exit(-1);
     }
 
-    std::cout << "Server is working\n";
-
     if (listen(serverSocket, 10) < 0) {
-        fprintf(stderr, "Listen error");
+        fprintf(stderr, "Listen error\n");
         exit(-1);
     }
 
     while(true) {
-        std::cout << "Waiting for connection\n";
-
         struct sockaddr_in client = { };
         int clientSocket = accept(serverSocket, ( struct sockaddr * ) & client,
-                                        reinterpret_cast<socklen_t *>(&len));
-
-        std::cout << "Connect " << client.sin_port <<"\n";
+                reinterpret_cast<socklen_t *>(&len));
         this->mediator.addNewClient(clientSocket);
     }
 }
