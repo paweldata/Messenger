@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pawel/Documents/projects/messenger/client/main.cpp" "/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles/client.dir/main.cpp.o"
   "/home/pawel/Documents/projects/messenger/client/src/client/Client.cpp" "/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles/client.dir/src/client/Client.cpp.o"
+  "/home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp" "/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles/client.dir/src/client/ClientState.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

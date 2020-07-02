@@ -58,10 +58,7 @@ void Mediator::getMessages(Client client) {
 }
 
 void Mediator::getNick(Client& client) {
-    std::string info = "Give nick (max 10 characters) : ";
     std::string nick(10, ' ');
-
-    send(client.getSocket(), &info[0], info.size(), 0);
     read(client.getSocket(), &nick[0], 10);
 
     client.setNick(nick);

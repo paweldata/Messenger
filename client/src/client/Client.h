@@ -3,18 +3,32 @@
 
 
 #include <thread>
+#include <mutex>
+
+#include "ClientState.cpp"
 
 class Client {
 public:
     Client();
 
 private:
-    void getMessage();
+    void getMessageFromServer();
+    void chooseOption();
+
     void sendMessage();
+    void uploadFile();
+
+    void printMessages();
 
     int serverSocket;
     std::thread readThread;
     std::thread sendThread;
+
+    std::string messages;
+    int messagesSize;
+    ClientState state;
+
+    std::mutex block;
 };
 
 

@@ -91,6 +91,9 @@
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/Client.h">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -177,6 +177,33 @@ src/client/Client.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/Client.cpp.s
 .PHONY : src/client/Client.cpp.s
 
+src/client/ClientState.o: src/client/ClientState.cpp.o
+
+.PHONY : src/client/ClientState.o
+
+# target to build an object file
+src/client/ClientState.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.o
+.PHONY : src/client/ClientState.cpp.o
+
+src/client/ClientState.i: src/client/ClientState.cpp.i
+
+.PHONY : src/client/ClientState.i
+
+# target to preprocess a source file
+src/client/ClientState.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.i
+.PHONY : src/client/ClientState.cpp.i
+
+src/client/ClientState.s: src/client/ClientState.cpp.s
+
+.PHONY : src/client/ClientState.s
+
+# target to generate assembly for a file
+src/client/ClientState.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.s
+.PHONY : src/client/ClientState.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... src/client/Client.o"
 	@echo "... src/client/Client.i"
 	@echo "... src/client/Client.s"
+	@echo "... src/client/ClientState.o"
+	@echo "... src/client/ClientState.i"
+	@echo "... src/client/ClientState.s"
 .PHONY : help
 
 

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/client.dir/main.cpp.o CMakeFiles/client.dir/src/client/Client.cpp.o  -o client -lpthread 
+/usr/bin/c++  -g   CMakeFiles/client.dir/main.cpp.o CMakeFiles/client.dir/src/client/Client.cpp.o CMakeFiles/client.dir/src/client/ClientState.cpp.o  -o client -lpthread 

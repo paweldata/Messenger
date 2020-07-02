@@ -3,7 +3,11 @@
 
 CMakeFiles/client.dir/main.cpp.o: ../main.cpp
 CMakeFiles/client.dir/main.cpp.o: ../src/client/Client.h
+CMakeFiles/client.dir/main.cpp.o: ../src/client/ClientState.cpp
 
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/Client.cpp
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/Client.h
+CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/ClientState.cpp
+
+CMakeFiles/client.dir/src/client/ClientState.cpp.o: ../src/client/ClientState.cpp
 
