@@ -18,6 +18,10 @@ public:
 private:
     std::vector<Client> clientList;
     std::vector<std::thread> threadList;
+    std::string messages;
+
+    static int messagesMaxAmount;
+    int messagesCounter;
 };
 
 

@@ -13,6 +13,6 @@ int Client::getSocket() {
     return this->socket;
 }
 
-std::string Client::getNick() {
+std::string Client::getNick() const {
     return this->nick;
 }

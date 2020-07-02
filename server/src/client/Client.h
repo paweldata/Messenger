@@ -9,7 +9,7 @@ public:
     explicit Client(int socket);
     void setNick(std::string n);
     int getSocket();
-    std::string getNick();
+    std::string getNick() const;
 
 private:
     int socket;

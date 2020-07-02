@@ -31,10 +31,11 @@ Client::Client() {
 }
 
 void Client::getMessage() {
-    std::string message(1025, 0);
+    std::string message(1680, 0);
 
     while (true) {
-        int size = read(this->serverSocket, &message[0], 1024);
+        int size = read(this->serverSocket, &message[0], 1680);
+        system("clear");
         std::cout << message.substr(0, size) << "\n";
     }
 }
@@ -44,6 +45,11 @@ void Client::sendMessage() {
 
     while (true) {
         std::getline(std::cin, message);
-        send(this->serverSocket, &message[0], message.size(), 0);
+
+        if (message.size() > 100) {
+            std::cout << "Too long message (max 100 characters)\n";
+        } else {
+            send(this->serverSocket, &message[0], message.size(), 0);
+        }
     }
 }
