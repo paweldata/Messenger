@@ -94,6 +94,36 @@
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.h">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/State.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/State.h">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateDownloadFile.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateDownloadFile.h">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateMain.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateMain.h">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateUploadFile.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateUploadFile.h">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

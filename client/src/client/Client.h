@@ -6,10 +6,17 @@
 #include <mutex>
 
 #include "ClientState.cpp"
+#include "../state/State.h"
+
+class State;
 
 class Client {
 public:
     Client();
+    std::string getMessages();
+    int getMessagesSize();
+    int getServerSocket();
+    void changeState(State* state);
 
 private:
     void getMessageFromServer();
@@ -28,9 +35,10 @@ private:
 
     std::string messages;
     int messagesSize;
-    ClientState state;
+    ClientState stateold;
 
     std::mutex block;
+    State* state;
 };
 
 

@@ -204,6 +204,141 @@ src/client/ClientState.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.s
 .PHONY : src/client/ClientState.cpp.s
 
+src/state/NewMessageState.o: src/state/NewMessageState.cpp.o
+
+.PHONY : src/state/NewMessageState.o
+
+# target to build an object file
+src/state/NewMessageState.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/NewMessageState.cpp.o
+.PHONY : src/state/NewMessageState.cpp.o
+
+src/state/NewMessageState.i: src/state/NewMessageState.cpp.i
+
+.PHONY : src/state/NewMessageState.i
+
+# target to preprocess a source file
+src/state/NewMessageState.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/NewMessageState.cpp.i
+.PHONY : src/state/NewMessageState.cpp.i
+
+src/state/NewMessageState.s: src/state/NewMessageState.cpp.s
+
+.PHONY : src/state/NewMessageState.s
+
+# target to generate assembly for a file
+src/state/NewMessageState.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/NewMessageState.cpp.s
+.PHONY : src/state/NewMessageState.cpp.s
+
+src/state/State.o: src/state/State.cpp.o
+
+.PHONY : src/state/State.o
+
+# target to build an object file
+src/state/State.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/State.cpp.o
+.PHONY : src/state/State.cpp.o
+
+src/state/State.i: src/state/State.cpp.i
+
+.PHONY : src/state/State.i
+
+# target to preprocess a source file
+src/state/State.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/State.cpp.i
+.PHONY : src/state/State.cpp.i
+
+src/state/State.s: src/state/State.cpp.s
+
+.PHONY : src/state/State.s
+
+# target to generate assembly for a file
+src/state/State.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/State.cpp.s
+.PHONY : src/state/State.cpp.s
+
+src/state/StateDownloadFile.o: src/state/StateDownloadFile.cpp.o
+
+.PHONY : src/state/StateDownloadFile.o
+
+# target to build an object file
+src/state/StateDownloadFile.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o
+.PHONY : src/state/StateDownloadFile.cpp.o
+
+src/state/StateDownloadFile.i: src/state/StateDownloadFile.cpp.i
+
+.PHONY : src/state/StateDownloadFile.i
+
+# target to preprocess a source file
+src/state/StateDownloadFile.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.i
+.PHONY : src/state/StateDownloadFile.cpp.i
+
+src/state/StateDownloadFile.s: src/state/StateDownloadFile.cpp.s
+
+.PHONY : src/state/StateDownloadFile.s
+
+# target to generate assembly for a file
+src/state/StateDownloadFile.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.s
+.PHONY : src/state/StateDownloadFile.cpp.s
+
+src/state/StateMain.o: src/state/StateMain.cpp.o
+
+.PHONY : src/state/StateMain.o
+
+# target to build an object file
+src/state/StateMain.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.o
+.PHONY : src/state/StateMain.cpp.o
+
+src/state/StateMain.i: src/state/StateMain.cpp.i
+
+.PHONY : src/state/StateMain.i
+
+# target to preprocess a source file
+src/state/StateMain.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.i
+.PHONY : src/state/StateMain.cpp.i
+
+src/state/StateMain.s: src/state/StateMain.cpp.s
+
+.PHONY : src/state/StateMain.s
+
+# target to generate assembly for a file
+src/state/StateMain.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.s
+.PHONY : src/state/StateMain.cpp.s
+
+src/state/StateUploadFile.o: src/state/StateUploadFile.cpp.o
+
+.PHONY : src/state/StateUploadFile.o
+
+# target to build an object file
+src/state/StateUploadFile.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o
+.PHONY : src/state/StateUploadFile.cpp.o
+
+src/state/StateUploadFile.i: src/state/StateUploadFile.cpp.i
+
+.PHONY : src/state/StateUploadFile.i
+
+# target to preprocess a source file
+src/state/StateUploadFile.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateUploadFile.cpp.i
+.PHONY : src/state/StateUploadFile.cpp.i
+
+src/state/StateUploadFile.s: src/state/StateUploadFile.cpp.s
+
+.PHONY : src/state/StateUploadFile.s
+
+# target to generate assembly for a file
+src/state/StateUploadFile.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateUploadFile.cpp.s
+.PHONY : src/state/StateUploadFile.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +357,21 @@ help:
 	@echo "... src/client/ClientState.o"
 	@echo "... src/client/ClientState.i"
 	@echo "... src/client/ClientState.s"
+	@echo "... src/state/NewMessageState.o"
+	@echo "... src/state/NewMessageState.i"
+	@echo "... src/state/NewMessageState.s"
+	@echo "... src/state/State.o"
+	@echo "... src/state/State.i"
+	@echo "... src/state/State.s"
+	@echo "... src/state/StateDownloadFile.o"
+	@echo "... src/state/StateDownloadFile.i"
+	@echo "... src/state/StateDownloadFile.s"
+	@echo "... src/state/StateMain.o"
+	@echo "... src/state/StateMain.i"
+	@echo "... src/state/StateMain.s"
+	@echo "... src/state/StateUploadFile.o"
+	@echo "... src/state/StateUploadFile.i"
+	@echo "... src/state/StateUploadFile.s"
 .PHONY : help
 
 

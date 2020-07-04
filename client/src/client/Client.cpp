@@ -6,11 +6,14 @@
 #include <fstream>
 
 #include "Client.h"
+#include "../state/StateMain.h"
+#include "../state/StateDownloadFile.h"
 
 Client::Client() {
-    this->state = WAIT;
+    this->stateold = WAIT;
     this->messages = std::string(1680, 0);
     this->messagesSize = 0;
+    this->state = new StateMain(this);
 
     struct sockaddr_in serwer =
             {
@@ -36,120 +39,42 @@ Client::Client() {
 void Client::getMessageFromServer() {
     while (true) {
         this->messagesSize = read(this->serverSocket, &this->messages[0], 1680);
-        if (this->state == WAIT) {
-            this->printMessages();
-        } else if (this->state == DOWNLOAD_FILE) {
-            this->showFiles();
+        if (auto* currState = dynamic_cast<StateMain*>(this->state)) {
+            currState->showNewMessages();
+        } else if (auto* currState = dynamic_cast<StateDownloadFile*>(this->state)) {
+            currState->showFiles();
         }
-
     }
 }
 
 void Client::chooseOption() {
     // set nick
-    this->state = SET_NICK;
+    this->stateold = SET_NICK;
     std::string name;
     std::cout << "Give nick (max 10 characters) : ";
     std::getline(std::cin, name);
     send(this->serverSocket, &name[0], name.size(), 0);
 
-    char choise;
-    this->state = WAIT;
-
-    while (true) {
-        this->printMessages();
-
-        std::cin >> choise;
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        switch (choise) {
-            case '1':  {
-                this->state = NEW_MESSAGE;
-                this->sendMessage();
-                this->state = WAIT;
-                break;
-            }
-            case '2': {
-                this->state = UPLOAD_FILE;
-                this->uploadFile();
-                this->state = WAIT;
-                break;
-            }
-            case '3': {
-                this->state = DOWNLOAD_FILE;
-                send(this->serverSocket, "fileshow", 8, 0);
-                break;
-            }
-        }
-    }
-}
-
-void Client::sendMessage() {
-    std::string message;
-    std::cout << "Message : ";
-    std::getline(std::cin, message);
-
-    if (message.size() > 92) {
-        std::cout << "Too long message (max 92 characters)\n";
-    } else {
-        message.insert(0, "message ");
-        send(this->serverSocket, &message[0], message.size(), 0);
-    }
-}
-
-void Client::uploadFile() {
-    this->state = UPLOAD_FILE;
-    std::cout << "Filename (path to file) : ";
-    std::string filename;
-    std::cin >> filename;
-
-    std::ifstream file(filename);
-
-    if (!file.is_open()) {
-        std::cout << "Wrong filename\n";
-        sleep(1);
-        return;
-    }
-
-    std::string data("filename" + filename);
-    send(this->serverSocket, &data[0], data.size(), 0);
-
-    char currChar;
-    int counter = 8;
-    data = std::string(" ", 92);
-    data.insert(0, "filedata");
-
-    while (file >> std::noskipws >> currChar) {
-        data[counter++] = currChar;
-
-        if (counter >= 100) {
-            send(this->serverSocket, &data[0], counter, 0);
-            counter = 8;
-            data.replace(0, 8, "filedata");
-            usleep(100);
-        }
-    }
-
-    send(this->serverSocket, &data[0], counter, 0);
-}
-
-void Client::printMessages() {
-    this->block.lock();
-
-    system("clear");
-    std::cout << messages.substr(0, this->messagesSize) << "\n";
-
-    if (this->state == WAIT) {
-        std::cout << "1 - send message\n"
-                     "2 - upload file\n"
-                     "3 - download file\n";
-    } else if (this->state == DOWNLOAD_FILE) {
-        std::cout << "Give filename\n";
-    }
-
-    this->block.unlock();
+    while (true)
+        this->state->execute();
 }
 
 void Client::showFiles() {
     std::cout << "Files:\n" << this->messages;
+}
+
+std::string Client::getMessages() {
+    return this->messages;
+}
+
+int Client::getMessagesSize() {
+    return this->messagesSize;
+}
+
+int Client::getServerSocket() {
+    return this->serverSocket;
+}
+
+void Client::changeState(State *state) {
+    this->state = state;
 }
