@@ -36,8 +36,12 @@ Client::Client() {
 void Client::getMessageFromServer() {
     while (true) {
         this->messagesSize = read(this->serverSocket, &this->messages[0], 1680);
-        if (this->state == WAIT)
+        if (this->state == WAIT) {
             this->printMessages();
+        } else if (this->state == DOWNLOAD_FILE) {
+            this->showFiles();
+        }
+
     }
 }
 
@@ -50,9 +54,9 @@ void Client::chooseOption() {
     send(this->serverSocket, &name[0], name.size(), 0);
 
     char choise;
+    this->state = WAIT;
 
     while (true) {
-        this->state = WAIT;
         this->printMessages();
 
         std::cin >> choise;
@@ -62,11 +66,18 @@ void Client::chooseOption() {
             case '1':  {
                 this->state = NEW_MESSAGE;
                 this->sendMessage();
+                this->state = WAIT;
                 break;
             }
             case '2': {
                 this->state = UPLOAD_FILE;
                 this->uploadFile();
+                this->state = WAIT;
+                break;
+            }
+            case '3': {
+                this->state = DOWNLOAD_FILE;
+                send(this->serverSocket, "fileshow", 8, 0);
                 break;
             }
         }
@@ -128,9 +139,17 @@ void Client::printMessages() {
     system("clear");
     std::cout << messages.substr(0, this->messagesSize) << "\n";
 
-    std::cout << "1 - send message\n"
-                 "2 - upload file\n"
-                 "3 - download file\n";
+    if (this->state == WAIT) {
+        std::cout << "1 - send message\n"
+                     "2 - upload file\n"
+                     "3 - download file\n";
+    } else if (this->state == DOWNLOAD_FILE) {
+        std::cout << "Give filename\n";
+    }
 
     this->block.unlock();
+}
+
+void Client::showFiles() {
+    std::cout << "Files:\n" << this->messages;
 }

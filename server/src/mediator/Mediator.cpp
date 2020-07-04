@@ -1,6 +1,6 @@
 #include <sys/socket.h>
 #include <unistd.h>
-#include <iostream>
+#include <dirent.h>
 #include <algorithm>
 #include <cstring>
 #include <mutex>
@@ -79,5 +79,21 @@ void Mediator::getFile(const std::string& message, Client* client, int size) {
         client->createFile("files/" + message.substr(8, size - 8));
     } else if (message.substr(0, 8) == "filedata") {
         client->writeToFile(message.substr(8, size - 8));
+    } else if (message.substr(0, 8) == "fileshow") {
+        DIR* dir;
+        struct dirent *de = nullptr;
+        std::string files;
+
+        if ((dir = opendir ("./files/")) != nullptr) {
+            while ((de = readdir(dir)) != nullptr) {
+                if (strcmp(de->d_name, ".") != 0  && strcmp(de->d_name, "..") != 0)
+                files.append(de->d_name);
+                files.append("\n");
+            }
+            closedir (dir);
+            send(client->getSocket(), &files[0], files.size(), 0);
+        } else {
+            send(client->getSocket(), "Server error\n", 12, 0);
+        }
     }
 }

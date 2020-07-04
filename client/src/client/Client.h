@@ -18,6 +18,8 @@ private:
     void sendMessage();
     void uploadFile();
 
+    void showFiles();
+
     void printMessages();
 
     int serverSocket;
