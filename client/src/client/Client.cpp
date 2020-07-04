@@ -3,6 +3,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <thread>
+#include <fstream>
 
 #include "Client.h"
 
@@ -74,20 +75,51 @@ void Client::chooseOption() {
 
 void Client::sendMessage() {
     std::string message;
+    std::cout << "Message : ";
     std::getline(std::cin, message);
 
-    std::cout << "Message : ";
-
-    if (message.size() > 100) {
-        std::cout << "Too long message (max 100 characters)\n";
+    if (message.size() > 92) {
+        std::cout << "Too long message (max 92 characters)\n";
     } else {
-        std::cout << "Wysylam\n";
+        message.insert(0, "message ");
         send(this->serverSocket, &message[0], message.size(), 0);
     }
 }
 
 void Client::uploadFile() {
+    this->state = UPLOAD_FILE;
+    std::cout << "Filename (path to file) : ";
+    std::string filename;
+    std::cin >> filename;
 
+    std::ifstream file(filename);
+
+    if (!file.is_open()) {
+        std::cout << "Wrong filename\n";
+        sleep(1);
+        return;
+    }
+
+    std::string data("filename" + filename);
+    send(this->serverSocket, &data[0], data.size(), 0);
+
+    char currChar;
+    int counter = 8;
+    data = std::string(" ", 92);
+    data.insert(0, "filedata");
+
+    while (file >> std::noskipws >> currChar) {
+        data[counter++] = currChar;
+
+        if (counter >= 100) {
+            send(this->serverSocket, &data[0], counter, 0);
+            counter = 8;
+            data.replace(0, 8, "filedata");
+            usleep(100);
+        }
+    }
+
+    send(this->serverSocket, &data[0], counter, 0);
 }
 
 void Client::printMessages() {

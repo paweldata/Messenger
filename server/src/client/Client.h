@@ -3,6 +3,7 @@
 
 
 #include <string>
+#include <fstream>
 
 class Client {
 public:
@@ -11,9 +12,14 @@ public:
     int getSocket();
     std::string getNick() const;
 
+    void createFile(std::string name);
+    void writeToFile(const std::string& data);
+
 private:
     int socket;
     std::string nick;
+    std::ofstream file;
+    std::string filename;
 };
 
 
