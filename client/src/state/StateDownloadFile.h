@@ -14,8 +14,9 @@ public:
 
 private:
     std::condition_variable cv;
-    std::mutex block;
-    bool ready;
+    //std::mutex block;
+    bool filenamesExists;
+    bool afterDownload;
 
     std::ofstream file;
     std::string filename;

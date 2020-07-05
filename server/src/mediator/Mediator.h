@@ -17,7 +17,7 @@ public:
 
 private:
     void getMessage(std::string message, Client* client, int size);
-    void getFile(const std::string& message, Client* client, int size);
+    void fileOptions(const std::string& message, Client* client, int size);
 
     std::vector<Client*> clientList;
     std::vector<std::thread> threadList;

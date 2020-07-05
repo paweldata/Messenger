@@ -47,7 +47,7 @@ void Mediator::getMessages(Client* client) {
         if (message.substr(0, 8) == "message ") {
             this->getMessage(message, client, size);
         } else if (message.substr(0, 4) == "file") {
-            this->getFile(message, client, size);
+            this->fileOptions(message, client, size);
         }
     }
 }
@@ -78,33 +78,39 @@ void Mediator::getMessage(std::string message, Client* client, int size) {
         send(c->getSocket(), &this->messages[0], this->messages.size(), 0);
 }
 
-void Mediator::getFile(const std::string& message, Client* client, int size) {
+void Mediator::fileOptions(const std::string& message, Client* client, int size) {
     if (message.substr(0, 8) == "filename") {
         client->createFile("files/" + message.substr(8, size - 8));
     } else if (message.substr(0, 8) == "filedata") {
         client->writeToFile(message.substr(8, size - 8));
+    } else if (message.substr(0, 8) == "fileend ") {
+        client->writeToFile(message.substr(8, size - 8));
+        std::string newMessage(client->getNick() + "[upload new file]");
+        this->getMessage(newMessage, client, newMessage.size());
     } else if (message.substr(0, 8) == "fileshow") {
-        DIR* dir;
-        struct dirent *de = nullptr;
-        std::string files;
+            DIR* dir;
+            struct dirent *de = nullptr;
+            std::string files;
 
-        if ((dir = opendir ("./files/")) != nullptr) {
-            while ((de = readdir(dir)) != nullptr) {
-                if (strcmp(de->d_name, ".") != 0  && strcmp(de->d_name, "..") != 0) {
-                    files.append(de->d_name);
-                    files.append("\n");
+            if ((dir = opendir ("./files/")) != nullptr) {
+                while ((de = readdir(dir)) != nullptr) {
+                    if (strcmp(de->d_name, ".") != 0  && strcmp(de->d_name, "..") != 0) {
+                        files.append(de->d_name);
+                        files.append("\n");
+                    }
                 }
+                closedir (dir);
+                send(client->getSocket(), &files[0], files.size(), 0);
+            } else {
+                send(client->getSocket(), "Server error\n", 12, 0);
             }
-            closedir (dir);
-            send(client->getSocket(), &files[0], files.size(), 0);
-        } else {
-            send(client->getSocket(), "Server error\n", 12, 0);
-        }
     } else if (message.substr(0, 8) == "filedown") {
         std::ifstream file("files/" + message.substr(8, size - 8));
 
         if (!file.is_open()) {
             send(client->getSocket(), "Wrong filename\n", 14, 0);
+            sleep(1);
+            send(client->getSocket(), &this->messages[0], this->messages.size(), 0);
             return;
         }
 

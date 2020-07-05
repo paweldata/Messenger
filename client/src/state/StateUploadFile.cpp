@@ -14,6 +14,7 @@ void StateUploadFile::execute() {
     this->file = std::ifstream(filename);
     if (!file.is_open()) {
         std::cout << "Wrong filename\n";
+        sleep(1);
         this->client->changeState(new StateMain(this->client));
         return;
     }
@@ -38,6 +39,7 @@ void StateUploadFile::execute() {
         }
     }
 
+    data.replace(0, 8, "fileend ");
     send(this->client->getServerSocket(), &data[0], counter, 0);
     this->client->changeState(new StateMain(this->client));
 }
