@@ -1,4 +1,35 @@
 /home/pawel/programs/clion-2019.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/c++ -G "CodeBlocks - Unix Makefiles" /home/pawel/Documents/projects/messenger/server
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/pawel/Documents/projects/messenger/server/cmake-build-debug
+-- Build files have been written to: /home/pawel/Documents/projects/messenger/server/cmake-build-debug/googletest-download
+Scanning dependencies of target googletest
+[ 11%] Creating directories for 'googletest'
+[ 22%] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest-src'...
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+[ 33%] No patch step for 'googletest'
+[ 44%] Performing update step for 'googletest'
+Current branch master is up to date.
+[ 55%] No configure step for 'googletest'
+[ 66%] No build step for 'googletest'
+[ 77%] No install step for 'googletest'
+[ 88%] No test step for 'googletest'
+[100%] Completed 'googletest'
+[100%] Built target googletest
+-- Found PythonInterp: /usr/bin/python (found version "2.7.17") 
+-- Configuring done
+CMake Error at CMakeLists.txt:29 (add_executable):
+  Cannot find source file:
+
+    test.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:29 (add_executable):
+  No SOURCES given to target: test
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

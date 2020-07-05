@@ -23,7 +23,7 @@ private:
     std::vector<std::thread> threadList;
     std::string messages;
 
-    static int messagesMaxAmount;
+    const int messagesMaxAmount = 15;
     int messagesCounter;
 };
 

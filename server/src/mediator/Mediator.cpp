@@ -8,8 +8,6 @@
 
 #include "Mediator.h"
 
-int Mediator::messagesMaxAmount = 15;
-
 Mediator::Mediator() {
     this->clientList = std::vector<Client*>();
     this->threadList = std::vector<std::thread>();
