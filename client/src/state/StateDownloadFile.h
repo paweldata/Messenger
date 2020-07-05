@@ -2,13 +2,23 @@
 #define CLIENT_STATEDOWNLOADFILE_H
 
 
+#include <condition_variable>
+#include <fstream>
 #include "State.h"
 
 class StateDownloadFile : public State {
 public:
-    explicit StateDownloadFile(Client *client) : State(client) {};
+    explicit StateDownloadFile(Client *client);
     void execute() override;
-    void showFiles();
+    void newMessages() override;
+
+private:
+    std::condition_variable cv;
+    std::mutex block;
+    bool ready;
+
+    std::ofstream file;
+    std::string filename;
 };
 
 

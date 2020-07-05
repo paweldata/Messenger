@@ -28,13 +28,12 @@ void StateUploadFile::execute() {
     data = std::string(" ", 92);
     data.insert(0, "filedata");
 
-    while (file >> std::noskipws >> currChar) {
+    while (this->file >> std::noskipws >> currChar) {
         data[counter++] = currChar;
 
         if (counter >= 100) {
             send(this->client->getServerSocket(), &data[0], counter, 0);
             counter = 8;
-            data.replace(0, 8, "filedata");
             usleep(100);
         }
     }

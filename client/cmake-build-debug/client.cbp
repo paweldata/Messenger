@@ -91,15 +91,6 @@
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/Client.h">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp">
-			<Option target="client"/>
-		</Unit>
-		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.cpp">
-			<Option target="client"/>
-		</Unit>
-		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.h">
-			<Option target="client"/>
-		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/State.cpp">
 			<Option target="client"/>
 		</Unit>
@@ -116,6 +107,12 @@
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateMain.h">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.h">
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateUploadFile.cpp">

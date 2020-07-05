@@ -10,6 +10,7 @@ class State {
 public:
     State(Client* client);
     virtual void execute() = 0;
+    virtual void newMessages() = 0;
 
 protected:
     Client* client;

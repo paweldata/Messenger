@@ -3,39 +3,39 @@
 
 CMakeFiles/client.dir/main.cpp.o: ../main.cpp
 CMakeFiles/client.dir/main.cpp.o: ../src/client/Client.h
-CMakeFiles/client.dir/main.cpp.o: ../src/client/ClientState.cpp
 CMakeFiles/client.dir/main.cpp.o: ../src/state/State.h
 
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/Client.cpp
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/Client.h
-CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/ClientState.cpp
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/state/State.h
+CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/state/StateDownloadFile.h
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/state/StateMain.h
 
-CMakeFiles/client.dir/src/client/ClientState.cpp.o: ../src/client/ClientState.cpp
-
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/client/Client.h
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/client/ClientState.cpp
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/state/NewMessageState.cpp
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/state/NewMessageState.h
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/state/State.h
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/state/StateMain.h
-
 CMakeFiles/client.dir/src/state/State.cpp.o: ../src/client/Client.h
-CMakeFiles/client.dir/src/state/State.cpp.o: ../src/client/ClientState.cpp
 CMakeFiles/client.dir/src/state/State.cpp.o: ../src/state/State.cpp
 CMakeFiles/client.dir/src/state/State.cpp.o: ../src/state/State.h
 
+CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: ../src/client/Client.h
+CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: ../src/state/State.h
+CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: ../src/state/StateDownloadFile.cpp
+CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: ../src/state/StateDownloadFile.h
+CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: ../src/state/StateMain.h
+
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/client/Client.h
-CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/client/ClientState.cpp
-CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/NewMessageState.h
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/State.h
+CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/StateDownloadFile.h
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/StateMain.cpp
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/StateMain.h
+CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/StateNewMessage.h
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/StateUploadFile.h
 
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: ../src/client/Client.h
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: ../src/state/State.h
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: ../src/state/StateMain.h
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: ../src/state/StateNewMessage.cpp
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: ../src/state/StateNewMessage.h
+
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: ../src/client/Client.h
-CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: ../src/client/ClientState.cpp
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: ../src/state/State.h
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: ../src/state/StateMain.h
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: ../src/state/StateUploadFile.cpp

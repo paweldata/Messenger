@@ -1,17 +1,12 @@
 #include <iostream>
 
 #include "StateMain.h"
-#include "NewMessageState.h"
+#include "StateNewMessage.h"
 #include "StateUploadFile.h"
 #include "StateDownloadFile.h"
 
-StateMain::StateMain(Client *client) : State(client) {
-
-}
-
-
 void StateMain::execute() {
-    this->showNewMessages();
+    this->newMessages();
 
     char choise;
     std::cin >> choise;
@@ -19,7 +14,7 @@ void StateMain::execute() {
 
     switch (choise) {
         case '1':  {
-            this->client->changeState(new NewMessageState(this->client));
+            this->client->changeState(new StateNewMessage(this->client));
             break;
         }
         case '2': {
@@ -30,15 +25,19 @@ void StateMain::execute() {
             this->client->changeState(new StateDownloadFile(this->client));
             break;
         }
+        case '4': {
+            exit(0);
+        }
     }
 }
 
-void StateMain::showNewMessages() {
+void StateMain::newMessages() {
     this->block.lock();
     system("clear");
     std::cout << this->client->getMessages().substr(0, this->client->getMessagesSize()) << "\n";
     std::cout << "1 - send message\n"
                  "2 - upload file\n"
-                 "3 - download file\n";
+                 "3 - download file\n"
+                 "4 - exit\n";
     this->block.unlock();
 }

@@ -83,22 +83,9 @@ CMakeFiles/client.dir/src/client/Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/client/Client.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/Documents/projects/messenger/client/src/client/Client.cpp -o CMakeFiles/client.dir/src/client/Client.cpp.s
 
-CMakeFiles/client.dir/src/client/ClientState.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/src/client/ClientState.cpp.o: ../src/client/ClientState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/src/client/ClientState.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/client/ClientState.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp
-
-CMakeFiles/client.dir/src/client/ClientState.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/client/ClientState.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp > CMakeFiles/client.dir/src/client/ClientState.cpp.i
-
-CMakeFiles/client.dir/src/client/ClientState.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/client/ClientState.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/Documents/projects/messenger/client/src/client/ClientState.cpp -o CMakeFiles/client.dir/src/client/ClientState.cpp.s
-
 CMakeFiles/client.dir/src/state/State.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/state/State.cpp.o: ../src/state/State.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/src/state/State.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/src/state/State.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/state/State.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/state/State.cpp
 
 CMakeFiles/client.dir/src/state/State.cpp.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/client.dir/src/state/State.cpp.s: cmake_force
 
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/state/StateMain.cpp.o: ../src/state/StateMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/src/state/StateMain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/src/state/StateMain.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/state/StateMain.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/state/StateMain.cpp
 
 CMakeFiles/client.dir/src/state/StateMain.cpp.i: cmake_force
@@ -122,22 +109,22 @@ CMakeFiles/client.dir/src/state/StateMain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/state/StateMain.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/Documents/projects/messenger/client/src/state/StateMain.cpp -o CMakeFiles/client.dir/src/state/StateMain.cpp.s
 
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.o: ../src/state/NewMessageState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/client.dir/src/state/NewMessageState.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/state/NewMessageState.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.cpp
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o: ../src/state/StateNewMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.cpp
 
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/state/NewMessageState.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.cpp > CMakeFiles/client.dir/src/state/NewMessageState.cpp.i
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/state/StateNewMessage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.cpp > CMakeFiles/client.dir/src/state/StateNewMessage.cpp.i
 
-CMakeFiles/client.dir/src/state/NewMessageState.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/state/NewMessageState.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/Documents/projects/messenger/client/src/state/NewMessageState.cpp -o CMakeFiles/client.dir/src/state/NewMessageState.cpp.s
+CMakeFiles/client.dir/src/state/StateNewMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/state/StateNewMessage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.cpp -o CMakeFiles/client.dir/src/state/StateNewMessage.cpp.s
 
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o: ../src/state/StateUploadFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/state/StateUploadFile.cpp
 
 CMakeFiles/client.dir/src/state/StateUploadFile.cpp.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/client.dir/src/state/StateUploadFile.cpp.s: cmake_force
 
 CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o: ../src/state/StateDownloadFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o -c /home/pawel/Documents/projects/messenger/client/src/state/StateDownloadFile.cpp
 
 CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.i: cmake_force
@@ -165,10 +152,9 @@ CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.s: cmake_force
 client_OBJECTS = \
 "CMakeFiles/client.dir/main.cpp.o" \
 "CMakeFiles/client.dir/src/client/Client.cpp.o" \
-"CMakeFiles/client.dir/src/client/ClientState.cpp.o" \
 "CMakeFiles/client.dir/src/state/State.cpp.o" \
 "CMakeFiles/client.dir/src/state/StateMain.cpp.o" \
-"CMakeFiles/client.dir/src/state/NewMessageState.cpp.o" \
+"CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o" \
 "CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o" \
 "CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o"
 
@@ -177,15 +163,14 @@ client_EXTERNAL_OBJECTS =
 
 client: CMakeFiles/client.dir/main.cpp.o
 client: CMakeFiles/client.dir/src/client/Client.cpp.o
-client: CMakeFiles/client.dir/src/client/ClientState.cpp.o
 client: CMakeFiles/client.dir/src/state/State.cpp.o
 client: CMakeFiles/client.dir/src/state/StateMain.cpp.o
-client: CMakeFiles/client.dir/src/state/NewMessageState.cpp.o
+client: CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o
 client: CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o
 client: CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o
 client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pawel/Documents/projects/messenger/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

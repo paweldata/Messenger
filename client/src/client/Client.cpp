@@ -10,7 +10,6 @@
 #include "../state/StateDownloadFile.h"
 
 Client::Client() {
-    this->stateold = WAIT;
     this->messages = std::string(1680, 0);
     this->messagesSize = 0;
     this->state = new StateMain(this);
@@ -39,17 +38,12 @@ Client::Client() {
 void Client::getMessageFromServer() {
     while (true) {
         this->messagesSize = read(this->serverSocket, &this->messages[0], 1680);
-        if (auto* currState = dynamic_cast<StateMain*>(this->state)) {
-            currState->showNewMessages();
-        } else if (auto* currState = dynamic_cast<StateDownloadFile*>(this->state)) {
-            currState->showFiles();
-        }
+        this->state->newMessages();
     }
 }
 
 void Client::chooseOption() {
     // set nick
-    this->stateold = SET_NICK;
     std::string name;
     std::cout << "Give nick (max 10 characters) : ";
     std::getline(std::cin, name);
@@ -57,10 +51,6 @@ void Client::chooseOption() {
 
     while (true)
         this->state->execute();
-}
-
-void Client::showFiles() {
-    std::cout << "Files:\n" << this->messages;
 }
 
 std::string Client::getMessages() {

@@ -5,7 +5,6 @@
 #include <thread>
 #include <mutex>
 
-#include "ClientState.cpp"
 #include "../state/State.h"
 
 class State;
@@ -22,22 +21,13 @@ private:
     void getMessageFromServer();
     void chooseOption();
 
-    void sendMessage();
-    void uploadFile();
-
-    void showFiles();
-
-    void printMessages();
-
     int serverSocket;
     std::thread readThread;
     std::thread sendThread;
 
     std::string messages;
     int messagesSize;
-    ClientState stateold;
 
-    std::mutex block;
     State* state;
 };
 

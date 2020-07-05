@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cstring>
 #include <mutex>
+#include <iostream>
 
 #include "Mediator.h"
 
@@ -38,6 +39,8 @@ void Mediator::getMessages(Client* client) {
             close(client->getSocket());
             for (int i = 0; i < this->clientList.size(); i++)
                 if (this->clientList[i]->getSocket() == client->getSocket()) {
+                    std::string lastMessage(this->clientList[i]->getNick() + "[disconnect]");
+                    this->getMessage(lastMessage, this->clientList[i], lastMessage.size());
                     this->clientList.erase(this->clientList.begin() + i);
                     return;
                 }
@@ -56,6 +59,9 @@ void Mediator::getNick(Client* client) {
     read(client->getSocket(), &nick[0], 10);
 
     client->setNick(nick);
+
+    std::string newMessage = nick + "[connect to server]";
+    this->getMessage(newMessage, client, newMessage.size());
 }
 
 void Mediator::getMessage(std::string message, Client* client, int size) {
@@ -86,14 +92,42 @@ void Mediator::getFile(const std::string& message, Client* client, int size) {
 
         if ((dir = opendir ("./files/")) != nullptr) {
             while ((de = readdir(dir)) != nullptr) {
-                if (strcmp(de->d_name, ".") != 0  && strcmp(de->d_name, "..") != 0)
-                files.append(de->d_name);
-                files.append("\n");
+                if (strcmp(de->d_name, ".") != 0  && strcmp(de->d_name, "..") != 0) {
+                    files.append(de->d_name);
+                    files.append("\n");
+                }
             }
             closedir (dir);
             send(client->getSocket(), &files[0], files.size(), 0);
         } else {
             send(client->getSocket(), "Server error\n", 12, 0);
         }
+    } else if (message.substr(0, 8) == "filedown") {
+        std::ifstream file("files/" + message.substr(8, size - 8));
+
+        if (!file.is_open()) {
+            send(client->getSocket(), "Wrong filename\n", 14, 0);
+            return;
+        }
+
+        char currChar;
+        int counter = 8;
+        std::string data = std::string(" ", 92);
+        data.insert(0, "filedata");
+
+        while (file >> std::noskipws >> currChar) {
+            data[counter++] = currChar;
+
+            if (counter >= 100) {
+                send(client->getSocket(), &data[0], counter, 0);
+                counter = 8;
+                usleep(100);
+            }
+        }
+
+        data.replace(0, 8, "fileend ");
+        send(client->getSocket(), &data[0], counter, 0);
+        usleep(100);
+        send(client->getSocket(), &this->messages[0], this->messages.size(), 0);
     }
 }

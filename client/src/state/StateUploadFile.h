@@ -10,6 +10,7 @@ class StateUploadFile : public State {
 public:
     explicit StateUploadFile(Client *client) : State(client) {};
     void execute() override;
+    void newMessages() override {};
 
 private:
     std::ifstream file;

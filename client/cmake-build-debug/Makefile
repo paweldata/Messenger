@@ -177,60 +177,6 @@ src/client/Client.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/Client.cpp.s
 .PHONY : src/client/Client.cpp.s
 
-src/client/ClientState.o: src/client/ClientState.cpp.o
-
-.PHONY : src/client/ClientState.o
-
-# target to build an object file
-src/client/ClientState.cpp.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.o
-.PHONY : src/client/ClientState.cpp.o
-
-src/client/ClientState.i: src/client/ClientState.cpp.i
-
-.PHONY : src/client/ClientState.i
-
-# target to preprocess a source file
-src/client/ClientState.cpp.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.i
-.PHONY : src/client/ClientState.cpp.i
-
-src/client/ClientState.s: src/client/ClientState.cpp.s
-
-.PHONY : src/client/ClientState.s
-
-# target to generate assembly for a file
-src/client/ClientState.cpp.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/ClientState.cpp.s
-.PHONY : src/client/ClientState.cpp.s
-
-src/state/NewMessageState.o: src/state/NewMessageState.cpp.o
-
-.PHONY : src/state/NewMessageState.o
-
-# target to build an object file
-src/state/NewMessageState.cpp.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/NewMessageState.cpp.o
-.PHONY : src/state/NewMessageState.cpp.o
-
-src/state/NewMessageState.i: src/state/NewMessageState.cpp.i
-
-.PHONY : src/state/NewMessageState.i
-
-# target to preprocess a source file
-src/state/NewMessageState.cpp.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/NewMessageState.cpp.i
-.PHONY : src/state/NewMessageState.cpp.i
-
-src/state/NewMessageState.s: src/state/NewMessageState.cpp.s
-
-.PHONY : src/state/NewMessageState.s
-
-# target to generate assembly for a file
-src/state/NewMessageState.cpp.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/NewMessageState.cpp.s
-.PHONY : src/state/NewMessageState.cpp.s
-
 src/state/State.o: src/state/State.cpp.o
 
 .PHONY : src/state/State.o
@@ -312,6 +258,33 @@ src/state/StateMain.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.s
 .PHONY : src/state/StateMain.cpp.s
 
+src/state/StateNewMessage.o: src/state/StateNewMessage.cpp.o
+
+.PHONY : src/state/StateNewMessage.o
+
+# target to build an object file
+src/state/StateNewMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o
+.PHONY : src/state/StateNewMessage.cpp.o
+
+src/state/StateNewMessage.i: src/state/StateNewMessage.cpp.i
+
+.PHONY : src/state/StateNewMessage.i
+
+# target to preprocess a source file
+src/state/StateNewMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateNewMessage.cpp.i
+.PHONY : src/state/StateNewMessage.cpp.i
+
+src/state/StateNewMessage.s: src/state/StateNewMessage.cpp.s
+
+.PHONY : src/state/StateNewMessage.s
+
+# target to generate assembly for a file
+src/state/StateNewMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateNewMessage.cpp.s
+.PHONY : src/state/StateNewMessage.cpp.s
+
 src/state/StateUploadFile.o: src/state/StateUploadFile.cpp.o
 
 .PHONY : src/state/StateUploadFile.o
@@ -354,12 +327,6 @@ help:
 	@echo "... src/client/Client.o"
 	@echo "... src/client/Client.i"
 	@echo "... src/client/Client.s"
-	@echo "... src/client/ClientState.o"
-	@echo "... src/client/ClientState.i"
-	@echo "... src/client/ClientState.s"
-	@echo "... src/state/NewMessageState.o"
-	@echo "... src/state/NewMessageState.i"
-	@echo "... src/state/NewMessageState.s"
 	@echo "... src/state/State.o"
 	@echo "... src/state/State.i"
 	@echo "... src/state/State.s"
@@ -369,6 +336,9 @@ help:
 	@echo "... src/state/StateMain.o"
 	@echo "... src/state/StateMain.i"
 	@echo "... src/state/StateMain.s"
+	@echo "... src/state/StateNewMessage.o"
+	@echo "... src/state/StateNewMessage.i"
+	@echo "... src/state/StateNewMessage.s"
 	@echo "... src/state/StateUploadFile.o"
 	@echo "... src/state/StateUploadFile.i"
 	@echo "... src/state/StateUploadFile.s"

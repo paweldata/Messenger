@@ -8,9 +8,9 @@
 
 class StateMain : public State {
 public:
-    explicit StateMain(Client* client);
+    explicit StateMain(Client* client) : State(client) {};
     void execute() override;
-    void showNewMessages();
+    void newMessages() override;
 
 private:
     std::mutex block;

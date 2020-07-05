@@ -1,10 +1,10 @@
 #include <iostream>
 #include <sys/socket.h>
 
-#include "NewMessageState.h"
+#include "StateNewMessage.h"
 #include "StateMain.h"
 
-void NewMessageState::execute() {
+void StateNewMessage::execute() {
     system("clear");
     std::cout << this->client->getMessages().substr(0, this->client->getMessagesSize()) << "\n";
 
