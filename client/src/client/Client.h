@@ -19,7 +19,7 @@ public:
 
 private:
     void getMessageFromServer();
-    void chooseOption();
+    void getMessageFromClient();
 
     int serverSocket;
     std::thread readThread;

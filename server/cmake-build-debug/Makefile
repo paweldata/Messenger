@@ -267,6 +267,7 @@ src/client/Client.o: src/client/Client.cpp.o
 
 # target to build an object file
 src/client/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/client/Client.cpp.o
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/client/Client.cpp.o
 .PHONY : src/client/Client.cpp.o
 
@@ -276,6 +277,7 @@ src/client/Client.i: src/client/Client.cpp.i
 
 # target to preprocess a source file
 src/client/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/client/Client.cpp.i
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/client/Client.cpp.i
 .PHONY : src/client/Client.cpp.i
 
@@ -285,6 +287,7 @@ src/client/Client.s: src/client/Client.cpp.s
 
 # target to generate assembly for a file
 src/client/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/client/Client.cpp.s
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/client/Client.cpp.s
 .PHONY : src/client/Client.cpp.s
 
@@ -294,6 +297,7 @@ src/mediator/Mediator.o: src/mediator/Mediator.cpp.o
 
 # target to build an object file
 src/mediator/Mediator.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mediator/Mediator.cpp.o
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/mediator/Mediator.cpp.o
 .PHONY : src/mediator/Mediator.cpp.o
 
@@ -303,6 +307,7 @@ src/mediator/Mediator.i: src/mediator/Mediator.cpp.i
 
 # target to preprocess a source file
 src/mediator/Mediator.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mediator/Mediator.cpp.i
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/mediator/Mediator.cpp.i
 .PHONY : src/mediator/Mediator.cpp.i
 
@@ -312,6 +317,7 @@ src/mediator/Mediator.s: src/mediator/Mediator.cpp.s
 
 # target to generate assembly for a file
 src/mediator/Mediator.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mediator/Mediator.cpp.s
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/mediator/Mediator.cpp.s
 .PHONY : src/mediator/Mediator.cpp.s
 
@@ -321,6 +327,7 @@ src/server/Server.o: src/server/Server.cpp.o
 
 # target to build an object file
 src/server/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/server/Server.cpp.o
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.o
 .PHONY : src/server/Server.cpp.o
 
@@ -330,6 +337,7 @@ src/server/Server.i: src/server/Server.cpp.i
 
 # target to preprocess a source file
 src/server/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/server/Server.cpp.i
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.i
 .PHONY : src/server/Server.cpp.i
 
@@ -339,6 +347,7 @@ src/server/Server.s: src/server/Server.cpp.s
 
 # target to generate assembly for a file
 src/server/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/server/Server.cpp.s
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Server.cpp.s
 .PHONY : src/server/Server.cpp.s
 

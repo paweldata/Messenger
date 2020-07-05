@@ -3,11 +3,9 @@
 #include <iostream>
 #include <unistd.h>
 #include <thread>
-#include <fstream>
 
 #include "Client.h"
 #include "../state/StateMain.h"
-#include "../state/StateDownloadFile.h"
 
 Client::Client() {
     this->messages = std::string(1680, 0);
@@ -28,8 +26,14 @@ Client::Client() {
         exit(-1);
     }
 
+    // set nick
+    std::string name;
+    std::cout << "Give nick (max 8 characters) : ";
+    std::getline(std::cin, name);
+    send(this->serverSocket, &name[0], std::min(int(name.size()), 8), 0);
+
     this->readThread = std::thread(&Client::getMessageFromServer, this);
-    this->sendThread = std::thread(&Client::chooseOption, this);
+    this->sendThread = std::thread(&Client::getMessageFromClient, this);
 
     this->readThread.join();
     this->sendThread.join();
@@ -42,13 +46,7 @@ void Client::getMessageFromServer() {
     }
 }
 
-void Client::chooseOption() {
-    // set nick
-    std::string name;
-    std::cout << "Give nick (max 10 characters) : ";
-    std::getline(std::cin, name);
-    send(this->serverSocket, &name[0], name.size(), 0);
-
+void Client::getMessageFromClient() {
     while (true)
         this->state->execute();
 }

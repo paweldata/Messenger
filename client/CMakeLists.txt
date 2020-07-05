@@ -26,6 +26,6 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
                  EXCLUDE_FROM_ALL)
 
-add_executable(test test.cpp)
+add_executable(test test.cpp src/client/Client.cpp src/client/Client.h src/state/State.cpp src/state/State.h src/state/StateMain.cpp src/state/StateMain.h src/state/StateNewMessage.cpp src/state/StateNewMessage.h src/state/StateUploadFile.cpp src/state/StateUploadFile.h src/state/StateDownloadFile.cpp src/state/StateDownloadFile.h)
 target_link_libraries(test gtest_main)
 add_test(NAME example_test COMMAND example)

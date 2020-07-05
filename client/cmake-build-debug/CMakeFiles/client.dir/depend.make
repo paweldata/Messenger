@@ -8,7 +8,6 @@ CMakeFiles/client.dir/main.cpp.o: ../src/state/State.h
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/Client.cpp
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/client/Client.h
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/state/State.h
-CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/state/StateDownloadFile.h
 CMakeFiles/client.dir/src/client/Client.cpp.o: ../src/state/StateMain.h
 
 CMakeFiles/client.dir/src/state/State.cpp.o: ../src/client/Client.h

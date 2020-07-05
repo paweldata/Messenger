@@ -386,39 +386,51 @@
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/Client.cpp">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/client/Client.h">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/State.cpp">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/State.h">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateDownloadFile.cpp">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateDownloadFile.h">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateMain.cpp">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateMain.h">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.cpp">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateNewMessage.h">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateUploadFile.cpp">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/src/state/StateUploadFile.h">
+			<Option target="test"/>
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/client/test.cpp">

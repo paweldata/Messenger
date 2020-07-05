@@ -386,21 +386,27 @@
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/client/Client.cpp">
+			<Option target="test"/>
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/client/Client.h">
+			<Option target="test"/>
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/mediator/Mediator.cpp">
+			<Option target="test"/>
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/mediator/Mediator.h">
+			<Option target="test"/>
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/server/Server.cpp">
+			<Option target="test"/>
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/src/server/Server.h">
+			<Option target="test"/>
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/pawel/Documents/projects/messenger/server/test.cpp">

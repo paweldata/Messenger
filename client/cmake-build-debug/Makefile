@@ -267,6 +267,7 @@ src/client/Client.o: src/client/Client.cpp.o
 
 # target to build an object file
 src/client/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/client/Client.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/Client.cpp.o
 .PHONY : src/client/Client.cpp.o
 
@@ -276,6 +277,7 @@ src/client/Client.i: src/client/Client.cpp.i
 
 # target to preprocess a source file
 src/client/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/client/Client.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/Client.cpp.i
 .PHONY : src/client/Client.cpp.i
 
@@ -285,6 +287,7 @@ src/client/Client.s: src/client/Client.cpp.s
 
 # target to generate assembly for a file
 src/client/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/client/Client.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/Client.cpp.s
 .PHONY : src/client/Client.cpp.s
 
@@ -294,6 +297,7 @@ src/state/State.o: src/state/State.cpp.o
 
 # target to build an object file
 src/state/State.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/State.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/State.cpp.o
 .PHONY : src/state/State.cpp.o
 
@@ -303,6 +307,7 @@ src/state/State.i: src/state/State.cpp.i
 
 # target to preprocess a source file
 src/state/State.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/State.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/State.cpp.i
 .PHONY : src/state/State.cpp.i
 
@@ -312,6 +317,7 @@ src/state/State.s: src/state/State.cpp.s
 
 # target to generate assembly for a file
 src/state/State.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/State.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/State.cpp.s
 .PHONY : src/state/State.cpp.s
 
@@ -321,6 +327,7 @@ src/state/StateDownloadFile.o: src/state/StateDownloadFile.cpp.o
 
 # target to build an object file
 src/state/StateDownloadFile.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateDownloadFile.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.o
 .PHONY : src/state/StateDownloadFile.cpp.o
 
@@ -330,6 +337,7 @@ src/state/StateDownloadFile.i: src/state/StateDownloadFile.cpp.i
 
 # target to preprocess a source file
 src/state/StateDownloadFile.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateDownloadFile.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.i
 .PHONY : src/state/StateDownloadFile.cpp.i
 
@@ -339,6 +347,7 @@ src/state/StateDownloadFile.s: src/state/StateDownloadFile.cpp.s
 
 # target to generate assembly for a file
 src/state/StateDownloadFile.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateDownloadFile.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateDownloadFile.cpp.s
 .PHONY : src/state/StateDownloadFile.cpp.s
 
@@ -348,6 +357,7 @@ src/state/StateMain.o: src/state/StateMain.cpp.o
 
 # target to build an object file
 src/state/StateMain.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateMain.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.o
 .PHONY : src/state/StateMain.cpp.o
 
@@ -357,6 +367,7 @@ src/state/StateMain.i: src/state/StateMain.cpp.i
 
 # target to preprocess a source file
 src/state/StateMain.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateMain.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.i
 .PHONY : src/state/StateMain.cpp.i
 
@@ -366,6 +377,7 @@ src/state/StateMain.s: src/state/StateMain.cpp.s
 
 # target to generate assembly for a file
 src/state/StateMain.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateMain.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateMain.cpp.s
 .PHONY : src/state/StateMain.cpp.s
 
@@ -375,6 +387,7 @@ src/state/StateNewMessage.o: src/state/StateNewMessage.cpp.o
 
 # target to build an object file
 src/state/StateNewMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateNewMessage.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateNewMessage.cpp.o
 .PHONY : src/state/StateNewMessage.cpp.o
 
@@ -384,6 +397,7 @@ src/state/StateNewMessage.i: src/state/StateNewMessage.cpp.i
 
 # target to preprocess a source file
 src/state/StateNewMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateNewMessage.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateNewMessage.cpp.i
 .PHONY : src/state/StateNewMessage.cpp.i
 
@@ -393,6 +407,7 @@ src/state/StateNewMessage.s: src/state/StateNewMessage.cpp.s
 
 # target to generate assembly for a file
 src/state/StateNewMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateNewMessage.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateNewMessage.cpp.s
 .PHONY : src/state/StateNewMessage.cpp.s
 
@@ -402,6 +417,7 @@ src/state/StateUploadFile.o: src/state/StateUploadFile.cpp.o
 
 # target to build an object file
 src/state/StateUploadFile.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateUploadFile.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateUploadFile.cpp.o
 .PHONY : src/state/StateUploadFile.cpp.o
 
@@ -411,6 +427,7 @@ src/state/StateUploadFile.i: src/state/StateUploadFile.cpp.i
 
 # target to preprocess a source file
 src/state/StateUploadFile.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateUploadFile.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateUploadFile.cpp.i
 .PHONY : src/state/StateUploadFile.cpp.i
 
@@ -420,6 +437,7 @@ src/state/StateUploadFile.s: src/state/StateUploadFile.cpp.s
 
 # target to generate assembly for a file
 src/state/StateUploadFile.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/state/StateUploadFile.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/state/StateUploadFile.cpp.s
 .PHONY : src/state/StateUploadFile.cpp.s
 
